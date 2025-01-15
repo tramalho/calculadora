@@ -89,6 +89,10 @@ export default class Calculator extends Component {
 				});
 				break;
 		}
+
+		if (Number.isNaN(values[0]) || Number.isFinite(values[0])) {
+			this.clearMemory();
+		}
 	}
 
 	addDigit(digit) {
